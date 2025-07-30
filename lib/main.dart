@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
 import 'pages/welcome_page.dart';
+import 'pages/capture_page.dart';
+import 'pages/result_page.dart';
 
-void main() {
-  runApp(const TailorAIApp());
-}
+void main() => runApp(MyApp());
 
-class TailorAIApp extends StatelessWidget {
-  const TailorAIApp({super.key});
-
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tailor AI',
+      title: 'AR Height Estimator',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark(),
-      home: const WelcomePage(),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => WelcomePage(),
+        '/capture': (context) => CapturePage(),
+        '/result': (context) => ResultPage(),
+      },
     );
   }
 }

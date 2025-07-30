@@ -30,9 +30,12 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  image_picker: ^1.1.0
-  http: ^1.2.1
-  path_provider: ^2.1.2
+  camera: ^0.10.5+9 # Optional if using camera previews
+  video_player: ^2.7.0 # Optional for video playback (if desired)
+  permission_handler: ^10.4.5 # For camera and storage permissions
+  ar_flutter_plugin: ^0.7.1 # Optional - use if you want higher level ARKit/ARCore support
+  fluttertoast: ^8.2.4 # For quick UI feedback
+
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
@@ -61,8 +64,7 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/front.jpg
-    - assets/side.jpg
+    - assets/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
