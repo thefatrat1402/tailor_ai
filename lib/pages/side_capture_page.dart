@@ -46,7 +46,27 @@ class _SideCapturePageState extends State<SideCapturePage> {
             child: Opacity(
               opacity: 0.4,
               child: Image.asset('assets/side.jpg',
-                  fit: BoxFit.cover),
+                  fit: BoxFit.contain,
+                  alignment: Alignment.center, 
+              ),
+            ),
+          ),
+          Positioned(
+            bottom: 80,
+            left: 20,
+            right: 20,
+            child: Column(
+              children: const [
+                Text(
+                  "Hit this pose.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
             ),
           ),
           Center(

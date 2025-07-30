@@ -38,6 +38,24 @@ class _FrontCapturePageState extends State<FrontCapturePage> {
               ),
             ),
           ),
+          Positioned(
+            bottom: 80,
+            left: 20,
+            right: 20,
+            child: Column(
+              children: const [
+                Text(
+                  "Hit this pose.",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 18,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+              ],
+            ),
+          ),
           Center(
             child: _frontImage == null
                 ? IconButton(
@@ -47,7 +65,7 @@ class _FrontCapturePageState extends State<FrontCapturePage> {
                   )
                 : Column(
                     mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
+                  children: [
                       Image.file(_frontImage!, height: 300),
                       const SizedBox(height: 30),
                       ElevatedButton(
