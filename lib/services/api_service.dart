@@ -8,7 +8,7 @@ class ApiService {
     var uri = Uri.parse("http://localhost:12345/me/");
 
     var request = http.MultipartRequest("POST", uri)
-      ..fields['height'] = height
+      ..fields['height_cm'] = height
       ..files.add(await http.MultipartFile.fromPath('front_image', front.path))
       ..files.add(await http.MultipartFile.fromPath('side_image', side.path));
 
